@@ -17,24 +17,30 @@
 
 <body>
     <div id="todo">
-        <div class="container">
+        <div class="-dg--container">
             <!-- todo-list section -->
-            <div class="todo-list">
-                <h2 class="text-center p-3">TODO LIST</h2>
-                <ul class="-dg--list-group">
-                    <li v-for="(item, index) in toDoList" class=" p-3 m-2" v-if="!doneTask.includes(index)">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span :class="thingsDone(index)">{{item.text}} </span><i
-                                class="fa-solid fa-circle-xmark text-danger dg-cross -dg--c-pointer"
-                                @click="deleteToDo(index)"></i>
-                        </div>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col">
+                    <div class="todo-list">
+                        <h2 class="text-center p-3 text-danger">TO DO LIST<i class="fa-solid fa-list-check ms-2"></i>
+                        </h2>
+                        <ul class="-dg--list-group ">
+                            <li v-for="(item, index) in toDoList" class=" p-3 m-3" v-if="!doneTask.includes(index)">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span :class="thingsDone(index)" @click="barsToDo(index)">{{item.text}} </span><i
+                                        class="fa-solid fa-circle-xmark text-danger dg-cross -dg--c-pointer"
+                                        @click="deleteToDo(index)"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- / todo-list section -->
                 <!-- add-to-list section -->
                 <div class="row justify-content-center mt-5">
-                    <div class="col-5 text-center">
-                        <h3>ADD TO LIST</h3>
+                    <div class="col-5 text-center ">
+                        <h3 class="text-danger">ADD TO LIST <i class="fa-solid fa-pen-to-square ms-2"></i></h3>
                         <div class="input-group mt-3">
                             <input type="text" v-model="newToDo" class="form-control" placeholder="Write a new to do..."
                                 aria-label="Write a new to do..." aria-describedby="button-addon2"

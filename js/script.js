@@ -24,7 +24,7 @@ console.log("Vue Js ok!");
 const toDoList = [
   {
     text: "Ascoltare playlist Spotify",
-    done: true,
+    done: false,
   },
   {
     text: "Riguardare lezione di Boolean",
@@ -36,11 +36,11 @@ const toDoList = [
   },
   {
     text: "Allenamento",
-    done: true,
+    done: false,
   },
   {
     text: "Fare la spesa",
-    done: true,
+    done: false,
   },
 ];
 
@@ -69,6 +69,14 @@ const app = new Vue({
         this.newToDo = "";
         this.toDoList.push(newWrittenToDo);
         // console.log(newWrittenToDo);
+      }
+    },
+
+    barsToDo(index) {
+      if (this.toDoList[index].done) {
+        this.toDoList[index].done = false;
+      } else {
+        this.toDoList[index].done = true;
       }
     },
   },
