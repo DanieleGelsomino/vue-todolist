@@ -32,11 +32,11 @@ const toDoList = [
   },
   {
     text: "Giocare a COD",
-    done: true,
+    done: false,
   },
   {
     text: "Allenamento",
-    done: false,
+    done: true,
   },
   {
     text: "Fare la spesa",
@@ -46,5 +46,17 @@ const toDoList = [
 
 const app = new Vue({
   el: "#todo",
-  data: "toDoList",
+  data: {
+    toDoList,
+    doneTask: [],
+    newToDo: "",
+  },
+  methods: {
+    thingsDone(index) {
+      return this.toDoList[index].done ? "text-decoration-line-through" : "";
+    },
+    deleteToDo(index) {
+      this.doneTask.push(index);
+    },
+  },
 });

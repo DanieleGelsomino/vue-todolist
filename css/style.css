@@ -1,0 +1,14 @@
+.-dg--list-group li {
+  list-style-type: none;
+  border: 2px solid rgb(143, 195, 196);
+  background-color: rgb(143, 195, 196);
+  border-radius: 20px;
+}
+
+.-dg--btn {
+  background-color: rgb(143, 195, 196);
+}
+
+.-dg--c-pointer {
+  cursor: pointer;
+}
