@@ -32,8 +32,14 @@ h3 {
 
 .-dg--c-pointer {
   cursor: pointer;
+  display: none;
+  font-size: 1.4rem;
 }
 
 .-dg--c-pointer:hover {
   transform: scale(1.1);
+}
+
+.-dg--list-group li:hover .-dg--c-pointer {
+  display: block;
 }
