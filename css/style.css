@@ -1,14 +1,18 @@
 .-dg--list-group li {
   list-style-type: none;
-  border: 2px solid rgb(143, 195, 196);
-  background-color: rgb(143, 195, 196);
+  border: 2px solid #8fc3c4;
+  background-color: #8fc3c4;
   border-radius: 20px;
 }
 
 .-dg--btn {
-  background-color: rgb(143, 195, 196);
+  background-color: #8fc3c4;
 }
 
 .-dg--c-pointer {
   cursor: pointer;
+}
+
+.-dg--c-pointer:hover {
+  transform: scale(1.1);
 }

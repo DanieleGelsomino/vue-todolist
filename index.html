@@ -36,10 +36,11 @@
                     <div class="col-5 text-center">
                         <h3>ADD TO LIST</h3>
                         <div class="input-group mt-3">
-                            <input type="text" v-model="newToDo.text" class="form-control"
-                                placeholder="Write a new to do..." aria-label="Write a new to do..."
-                                aria-describedby="button-addon2">
-                            <button class="btn -dg--btn" type="button" id="button-addon2">Add</button>
+                            <input type="text" v-model="newToDo" class="form-control" placeholder="Write a new to do..."
+                                aria-label="Write a new to do..." aria-describedby="button-addon2"
+                                @keyup.enter="addNewToDo()">
+                            <button @click="addNewToDo()" class="btn -dg--btn" type="button"
+                                id="button-addon2">Add</button>
                         </div>
                     </div>
                 </div>

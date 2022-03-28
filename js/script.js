@@ -31,7 +31,7 @@ const toDoList = [
     done: false,
   },
   {
-    text: "Giocare a COD",
+    text: "Giocare a Call of Duty",
     done: false,
   },
   {
@@ -57,6 +57,19 @@ const app = new Vue({
     },
     deleteToDo(index) {
       this.doneTask.push(index);
+      //   console.log(this.doneTask);
+    },
+
+    addNewToDo() {
+      if (this.newToDo.length > 0) {
+        const newWrittenToDo = {
+          text: this.newToDo,
+          done: false,
+        };
+        this.newToDo = "";
+        this.toDoList.push(newWrittenToDo);
+        // console.log(newWrittenToDo);
+      }
     },
   },
 });
